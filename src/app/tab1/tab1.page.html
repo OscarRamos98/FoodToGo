@@ -1,0 +1,22 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+     Productos
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list *ngFor="let product of products">
+    <ion-item>
+      <strong>{{product.name}}</strong>
+      <ion-note slot="end">
+          <ion-label>${{product.price}}</ion-label>
+      </ion-note>
+    </ion-item>
+  </ion-list>
+
+  <ion-button expand="block" shape="round" type="submit" (click)="Salir()">
+    Cerrar sesion
+  </ion-button>
+</ion-content>
